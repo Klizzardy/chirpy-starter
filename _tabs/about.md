@@ -4,5 +4,30 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+> 本页面显示的内容，在服务器上位于： `_tabs/about.md`{: .filepath } 
 {: .prompt-tip }
+
+
+
+
+**md 文档注意点：**
+1. 小标题需要从2级开始，这样 build 出来的项目在网页上浏览时导航栏的显示才是正确的。
+2. 文档结尾的参考文档如果上面没有引用过的话，会被隐藏不显示。（看看能不能解决这个问题
+
+
+
+**TODO：**
+- [x] win本地通过git提交新的修改后，服务器自动拉取并更新博客。
+- [x] 将 webhook 中的 Payload URL 从 ip 修改为 https 域名，保证安全。
+- [ ] bug：mermaid 图表显示不出来。[延期]
+- [x] bug：插入的图片在html中显示不出来，怎么快捷拷贝？
+- [x] 补充 bundle 相关的信息
+- [ ] 网站有时候会加载的很慢，通过F12发现是 bootstrap 网址获取失败导致的，怎样优化这个问题？
+- [ ] 标签的整理和划分。
+- [ ] 其它文档的整理。
+- [ ] 能否实现为工作文档添加权限？
+- [ ] py 脚本的云同步和整理。能否实现在云服务器上快捷检索然后使用？
+- [ ] 转译为html后的样式能否调整，我还是比较习惯代码块是深色的样子。保证和typora中一致最好。
+- [ ] 能否增加一个留言区？
+- [ ] 能否在win本地增加一个服务，实现md文档到git的自动同步
+- [x] 现在每篇文章右下角会有一个分享，但是分享都是推特、Facebook之类的，能否去掉或者换成别的

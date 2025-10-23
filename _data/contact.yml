@@ -3,16 +3,21 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+# - type: twitter
+#   icon: "fa-brands fa-x-twitter"
+
+# 本来想添加一个CSDN的链接，但是下面这个不生效，后面再研究一下为啥吧   -2025年10月15日18:20:51
+# - type: csdn
+#   icon: "fa-brands fa-x-csdn"
 
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+# - type: rss
+#   icon: "fas fa-rss"
+#   noblank: true
+
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon

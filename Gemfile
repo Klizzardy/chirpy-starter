@@ -12,3 +12,6 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
 end
 
 gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# gem 'jekyll-mermaid'  # 明确声明使用 Mermaid 插件   
+# 加载不出来，算了就不加载mermaid了吧
