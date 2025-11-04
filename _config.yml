@@ -1,15 +1,15 @@
 # The Site Configuration
 
 # Import the theme  
-# 这是我自己下载安装的一个主题
 theme: jekyll-theme-chirpy
+
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
 lang: zh-CN
 
-# Change to your timezone › https://zones.arilyn.cc
+# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone:
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
@@ -107,8 +107,12 @@ theme_mode: # [light | dark]
 # CDN url 将被添加到所有以‘/’开头的媒体资源（网站头像，帖子的图片，音频和视频文件）的路径中。
 # 
 # e.g. 'https://cdn.com'
-cdn: https://cdn.bootcdn.net
+cdn:
+
+# cdn: https://cdn.bootcdn.net
 # 为了解决有时候网站加载 bootstrap 比较慢甚至会失败的问题，将 cdn 替换为 BootCDN ，以提升稳定性。
+# 2025年10月23日15:50  测试将 cdn 修改为如上网址后，blog 中所有的图片都会加载失败，
+#                     且网站的 css 还不会从这个网站读取，只会从之前的 cdn.jsdliver.net 中获取。
 
 
 # the avatar on sidebar, support local or CORS resources
@@ -177,6 +181,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
+    theme: monokai  # 深色主题（可选：solarized-dark、dracula等）
     # default_lang: console
     span:
       line_numbers: false
