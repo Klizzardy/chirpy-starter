@@ -1,32 +1,39 @@
 # The Site Configuration
 
-# Import the theme
+# Import the theme  
 theme: jekyll-theme-chirpy
+
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
-lang: en
+lang: zh-CN
 
-# Change to your timezone › https://zones.arilyn.cc
+# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone:
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Klizzz's blog        # 博客标题（显示在顶部）
+tagline: 个人文档的云同步，归档，查阅，分享       # 副标题
+description: 使用jekyll搭建在阿里云服务器上的个人博客
+url: https://www.blog.klizzard.top  # 你的博客子域名（必须正确）
+baseurl: ""  # 子域名根路径，留空
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+# title: Chirpy # the main title
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+# tagline: A text-focused Jekyll theme # it will display as the subtitle
+
+# description: >- # used by seo meta and the atom feed
+  # A minimal, responsive and feature-rich Jekyll theme for technical writing.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+# url: ""
 
 github:
-  username: github_username # change to your GitHub username
+  username: Klizzardy # change to your GitHub username
 
 twitter:
   username: twitter_username # change to your Twitter username
@@ -34,14 +41,14 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
-  fediverse_handle: # fill in your fediverse handle. E.g. "@username@domain.com"
+  name: klizzz
+  email: hongtai1997@163.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://github.com/Klizzardy # change to your GitHub homepage
     # Uncomment below to add more social links
+    - https://blog.csdn.net/qq_34649825
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
@@ -94,12 +101,25 @@ theme_mode: # [light | dark]
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
 # will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
-#
+# 
+# 媒体资源的CDN端点。
+# 注意，一旦它被分配，
+# CDN url 将被添加到所有以‘/’开头的媒体资源（网站头像，帖子的图片，音频和视频文件）的路径中。
+# 
 # e.g. 'https://cdn.com'
 cdn:
 
+# cdn: https://cdn.bootcdn.net
+# 为了解决有时候网站加载 bootstrap 比较慢甚至会失败的问题，将 cdn 替换为 BootCDN ，以提升稳定性。
+# 2025年10月23日15:50  测试将 cdn 修改为如上网址后，blog 中所有的图片都会加载失败，
+#                     且网站的 css 还不会从这个网站读取，只会从之前的 cdn.jsdliver.net 中获取。
+
+
 # the avatar on sidebar, support local or CORS resources
-avatar:
+# 主页上头像的位置
+avatar: /assets/img/tech.jpg
+# avatar: /assets/img/favicons/dolphin.ico
+favicon: /assets/img/favicons/favicon.ico
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -108,13 +128,14 @@ social_preview_image: # string, local or CORS resources
 # boolean type, the global switch for TOC in posts.
 toc: true
 
+# 评论？这个支持评论区？后面有空研究一下？
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
   provider: # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
-  # utterances settings › https://utteranc.es/
+  # utterances settings › https://utteranc.es/self_host
   utterances:
     repo: # <gh-username>/<repo>
     issue_term: # < url | pathname | title | ...>
@@ -133,10 +154,10 @@ comments:
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
-    enabled: # boolean, keep empty means false
+    enabled: true # boolean, keep empty means false
     # specify the Jekyll environment, empty means both
     # only works if `assets.self_host.enabled` is 'true'
-    env: # [development | production]
+    env: development # [development | production]
 
 pwa:
   enabled: true # The option for PWA feature (installable)
@@ -152,6 +173,7 @@ paginate: 10
 
 # The base URL of your site
 baseurl: ""
+# baseurl: "/blog-static"
 
 # ------------ The following options are not recommended to be modified ------------------
 
@@ -160,6 +182,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: highlight
+    theme: monokai  # 深色主题（可选：solarized-dark、dracula等）
     # default_lang: console
     span:
       line_numbers: false
@@ -225,3 +248,7 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+# 启用 Mermaid 插件    # 不启用了，成功不了反正
+# plugins:
+#   - jekyll-mermaid
