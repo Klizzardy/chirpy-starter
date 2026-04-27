@@ -43,3 +43,16 @@
 # - type: threads
 #   icon: 'fa-brands fa-threads'
 #   url: ''                   # Fill with your Threads profile link
+
+
+# 2025年12月3日 下面的这个是管用的，但是感觉不舒服：
+# - type: tcp-beian
+#   icon: fas fa-id-card  # 可选图标
+#   text: "京ICP备2024081088号-2"
+#   url: "https://beian.miit.gov.cn/"
+#   noblank: false # open link in current tab
+
+# - type: gongan-beian
+#   icon: fas fa-id-card  # 可选图标
+#   text: "京公网安备 11010802020092号"
+#   url: "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020092"

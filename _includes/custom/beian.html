@@ -1,0 +1,29 @@
+<!-- _includes/custom/beian.html -->
+{% comment %}
+  备案信息组件
+  使用方式：{% include custom/beian.html %}
+{% endcomment %}
+
+{%- if site.data.beian.show_beian -%}
+<footer class="site-footer">
+  <div class="container">
+    <div class="beian-info">
+      <a href="{{ site.data.beian.icp_url }}" target="_blank" rel="noopener nofollow">
+        {{ site.data.beian.icp_number }}
+      </a>
+      
+      {%- if site.data.beian.gongan_number -%}
+      <span class="beian-divider">|</span>
+      <a href="{{ site.data.beian.gongan_url }}" target="_blank" rel="noopener nofollow">
+        {%- if site.data.beian.gongan_icon -%}
+        <img src="{{ site.data.beian.gongan_icon | relative_url }}" 
+             alt="公安备案" 
+             class="beian-icon">
+        {%- endif -%}
+        {{ site.data.beian.gongan_number }}
+      </a>
+      {%- endif -%}
+    </div>
+  </div>
+</footer>
+{%- endif -%}

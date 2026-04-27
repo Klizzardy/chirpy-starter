@@ -1,0 +1,54 @@
+<!-- The Footer -->
+<!-- LastModify：2025年12月4日11:29:00 -->
+<!-- 这个 footer 会替代源码中的同名文件，此文件修改自： /root/gems/gems/jekyll-theme-chirpy-7.4.1/_includes/footer.html  -->
+<!-- The Footer -->
+
+<!-- The Footer -->
+
+<footer
+  aria-label="Site Info"
+  class="
+    d-flex flex-column justify-content-center text-muted
+    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+  "
+>
+  <p class="mb-0">
+    {{- '©' }}
+    <time>{{ 'now' | date: '%Y' }}</time>
+
+    {% if site.social.links %}
+      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+    {% else %}
+      <em class="fst-normal">{{ site.social.name }}</em>.
+    {% endif %}
+
+    {% if site.data.locales[include.lang].copyright.brief %}
+      <span
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="{{ site.data.locales[include.lang].copyright.verbose }}"
+      >
+        {{- site.data.locales[include.lang].copyright.brief -}}
+      </span>
+    {% endif %}
+  </p>
+
+    <!-- 右边：技术支持信息 -->
+    <div class="text-center text-lg-end">
+      <p class="mb-1">
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" 
+         style="color: inherit; text-decoration: none;">
+        京ICP备2024081088号-2
+      </a>
+      <span style="margin: 0 6px; color: #adb5bd;">|</span>
+      <a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank" rel="noopener" 
+         style="color: inherit; text-decoration: none;">
+        <img src="/assets/img/beian.png" alt="公安备案" 
+             style="height: 12px; width: 12px; vertical-align: text-bottom; margin-right: 3px;">
+        京公网安备11010802046851号
+      </a>
+      </p>
+    </div>
+
+
+</footer>

@@ -6,11 +6,9 @@ tags: 技术 代码 基础知识 C++     # 标签
 
 ---
 
-目录：
-
 [TOC]
 
-# static_assert
+## static_assert
 
 `static_assert` 是 C++11 引入的一项特性，用于**在编译时进行断言检查**。[^1]
 
@@ -53,6 +51,6 @@ static_assert(size > 0);
 
 
 
-# 参考文章
+## 参考文章
 
 [^1]: 来源：ChatGPT-4
